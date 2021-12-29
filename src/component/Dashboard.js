@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Button, Grid, Paper} from "@mui/material";
 import {fetchCatFacts} from "../api/catFacts";
 import {setLoading, showToast} from "../App";
+import './dashboard.css'
 
 const Dashboard=props=>{
 
@@ -17,18 +18,14 @@ const Dashboard=props=>{
 
     if(array===null)
         return(
-            <div style={{height:'100vh',width:'100vw',display:'flex',flexDirection:'row',alignItems:'center'}}>
-                <div style={{width:'100vw'}}>
-                    <center>
-                        <Button
-                            variant={'outlined'}
-                            color={'primary'}
-                            onClick={loadClick}
-                        >
-                            Load Cat Facts
-                        </Button>
-                    </center>
-                </div>
+            <div className={'middleInScreen'}>
+                <Button
+                    variant={'outlined'}
+                    color={'primary'}
+                    onClick={loadClick}
+                >
+                    Load Cat Facts
+                </Button>
             </div>
         )
     return(
